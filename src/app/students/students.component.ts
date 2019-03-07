@@ -24,7 +24,7 @@ student: Student = {
   onSelect(student: Student): void {
     this.selectedStudent =student;
   }
-  addCustomer()
+  addStudent()
   {
     if(this.student.name.length>0)
     {
@@ -43,7 +43,7 @@ student: Student = {
   remove(i){
     this.students.splice(i,1);
   }
-  deleteCustomer(num)
+  deleteStudent(num)
   {
     var studentList:Student[]=[];
     for(var i=0;i<this.students.length;i++)

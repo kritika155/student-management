@@ -8,17 +8,17 @@
     float: right;
     position:absolute;
     top:250px;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 #rem{
     position: absolute;
-    left:200px;
+    left:400px;
 }
 .students{
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 25em;
 }
 .students li:hover {
     color: #607D8B;

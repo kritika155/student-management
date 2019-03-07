@@ -1,4 +1,7 @@
 <input type="text" placeholder="name" [(ngModel)]="student.name"> 
+<input type="text" placeholder="class" [(ngModel)]="student.class"> 
+<input type="text" placeholder="subject" [(ngModel)]="student.subject"> 
+<input type="text" placeholder="schoolname" [(ngModel)]="student.schoolname"> 
 <input type="button" (click)="addStudent()" value="Add Student">
 <div class="del">
     <input type="text" placeholder="id" name="id" [(ngModel)]="num">
@@ -12,6 +15,9 @@
         <li *ngFor="let i of students" (click)="onSelect(i)">
           <span class="badge">{{i.id}}</span>|
           <span class="badge">{{i.name}}</span>
+          <span class="badge">{{i.class}}</span>
+          <span class="badge">{{i.subject}}</span>
+          <span class="badge">{{i.schoolname}}</span>
           <input type="button" value="x" (click)="remove(i)" name="remove" id="rem">
         </li>
         
@@ -23,6 +29,13 @@
     <div>
       <label>name:
         <input [(ngModel)]="selectedStudent.name" placeholder="name">
+        <input [(ngModel)]="selectedStudent.class" placeholder="name">
+        <input [(ngModel)]="selectedStudent.subject" placeholder="name">
+        <input [(ngModel)]="selectedStudent.schoolname" placeholder="name">
+        
+
+
+
       </label>
     </div>
 </div>
