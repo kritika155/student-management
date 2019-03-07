@@ -1,0 +1,28 @@
+<input type="text" placeholder="name" [(ngModel)]="student.name"> 
+<input type="button" (click)="addStudent()" value="Add Student">
+<div class="del">
+    <input type="text" placeholder="id" name="id" [(ngModel)]="num">
+
+    <input type="button"(click)="deleteStudent(num)" value="Delete Student" name="delete">
+
+</div>
+<hr>
+<div class="students">
+    <ul>
+        <li *ngFor="let i of students" (click)="onSelect(i)">
+          <span class="badge">{{i.id}}</span>|
+          <span class="badge">{{i.name}}</span>
+          <input type="button" value="x" (click)="remove(i)" name="remove" id="rem">
+        </li>
+        
+      </ul>
+</div>
+<div class="appear" *ngIf="selectedStudent">
+    <h2>{{selectedStudent.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedStudent.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedStudent.name" placeholder="name">
+      </label>
+    </div>
+</div>

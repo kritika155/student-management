@@ -1,0 +1,17 @@
+<form action="" method="post" id="lgform">
+  <fieldset>
+      <legend>Login</legend>
+      <div>
+          <label for="email">Email Address</label><br>
+          <input type="email" name="email" id="email" required [(ngModel)]="email">
+      </div>
+      <div>
+          <label for="password">Password</label><br>
+          <input type="password" name="password" id="password" required [(ngModel)]="password">
+      </div>
+      <div>
+          <label for="submit"></label>
+          <input type="submit" value="Login" id="submit" (click)="validate(email,password)">
+      </div>
+  </fieldset>
+</form>
